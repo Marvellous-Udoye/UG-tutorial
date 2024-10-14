@@ -2,11 +2,12 @@
 
 import { FaEnvelope } from 'react-icons/fa';
 import SocialMediaIcons from './common/socialMediaIcons';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
     <footer className='bg-[#0e0f10]'>
-      <section className='max-w-[1100px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 pt-12 pb-16'>
+      <section className='max-w-[1100px] mx-auto grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4 lg:gap-justify-between pt-12 pb-16'>
         <div className='px-[15px]'>
           <h2 className='text-white text-[24px] font-semibold tracking-[1px] leading-[28px] mb-5'><span className='text-[#5e0e8f]'>About</span> Us</h2>
           <p className='max-w-[285px] text-[15px] font-normal tracking-[0.5px] leading-[27px] text-[#bfbfbf]'>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. lacinia eget consectetur sed, convallis at tellus..</p>
@@ -18,11 +19,21 @@ const Footer = () => {
         <div className='px-[15px]'>
           <h2 className='text-white text-[24px] font-semibold tracking-[1px] leading-[28px] mb-5'><span className='text-[#5e0e8f]'>Quick</span> Links</h2>
           <ul>
-            <li className='text-[15px] font-normal tracking-[0.5px] leading-[27px] text-[#bfbfbf] cursor-pointer'>Home</li>
-            <li className='text-[15px] font-normal tracking-[0.5px] leading-[27px] text-[#bfbfbf] cursor-pointer'>About</li>
-            <li className='text-[15px] font-normal tracking-[0.5px] leading-[27px] text-[#bfbfbf] cursor-pointer'>Services</li>
-            <li className='text-[15px] font-normal tracking-[0.5px] leading-[27px] text-[#bfbfbf] cursor-pointer'>Resources</li>
-            <li className='text-[15px] font-normal tracking-[0.5px] leading-[27px] text-[#bfbfbf] cursor-pointer'>Contact</li>
+            <Link href={'/'}>
+              <li className='text-[15px] font-normal tracking-[0.5px] leading-[27px] text-[#bfbfbf] cursor-pointer w-fit'>Home</li>
+            </Link>
+            <Link href={'/about'}>
+              <li className='text-[15px] font-normal tracking-[0.5px] leading-[27px] text-[#bfbfbf] cursor-pointer w-fit'>About</li>
+            </Link>
+            <Link href={'/services'}>
+              <li className='text-[15px] font-normal tracking-[0.5px] leading-[27px] text-[#bfbfbf] cursor-pointer w-fit'>Services</li>
+            </Link>
+            <Link href={'/resources'}>
+              <li className='text-[15px] font-normal tracking-[0.5px] leading-[27px] text-[#bfbfbf] cursor-pointer w-fit'>Resources</li>
+            </Link>
+            <Link href={'/contact'}>
+              <li className='text-[15px] font-normal tracking-[0.5px] leading-[27px] text-[#bfbfbf] cursor-pointer w-fit'>Contact</li>
+            </Link>
           </ul>
         </div>
         <div className='px-[15px]'>

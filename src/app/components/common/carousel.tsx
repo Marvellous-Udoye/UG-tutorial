@@ -1,100 +1,62 @@
-// "use client";
+import Image from "next/image";
 
-// import React, { useCallback, useEffect, useState } from 'react';
-// import useEmblaCarousel, { UseEmblaCarouselType, EmblaOptionsType } from 'embla-carousel-react';
-// import Autoplay from 'embla-carousel-autoplay';
-// import {
-//   NextButton,
-//   PrevButton,
-//   usePrevNextButtons
-// } from './carouselArrowButtons';
+const Carousel = () => {
+  return (
+    <div className="carousel w-full">
+      <div id="slide1" className="carousel-item relative w-full">
+        <Image
+          src="/images/g8.jpg"
+          className="w-full"
+          alt=""
+          width={1100}
+          height={100}
+        />
+        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide4" className="btn btn-circle">❮</a>
+          <a href="#slide2" className="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide2" className="carousel-item relative w-full">
+        <Image
+          src="/images/bg1.jpg"
+          className="w-full"
+          alt=""
+          width={1100}
+          height={100}
+        />
+        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide1" className="btn btn-circle">❮</a>
+          <a href="#slide3" className="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide3" className="carousel-item relative w-full">
+        <Image
+          src="/images/g8.jpg"
+          className="w-full"
+          alt=""
+          width={1100}
+          height={100}
+        />
+        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide2" className="btn btn-circle">❮</a>
+          <a href="#slide4" className="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide4" className="carousel-item relative w-full">
+        <Image
+          src="/images/bg1.jpg"
+          className="w-full"
+          alt=""
+          width={1100}
+          height={100}
+        />
+        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide3" className="btn btn-circle">❮</a>
+          <a href="#slide1" className="btn btn-circle">❯</a>
+        </div>
+      </div>
+    </div>
+  )
+}
 
-// // Define the type for props
-// interface EmblaCarouselProps {
-//   slides: number[]; // Assuming slides is an array of numbers (indexes)
-//   options?: EmblaOptionsType; // Optional Embla carousel options
-// }
-
-// const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
-//   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-//     Autoplay({ playOnInit: false, delay: 3000 })
-//   ]);
-//   const [isPlaying, setIsPlaying] = useState(false);
-
-//   const {
-//     prevBtnDisabled,
-//     nextBtnDisabled,
-//     onPrevButtonClick,
-//     onNextButtonClick
-//   } = usePrevNextButtons(emblaApi);
-
-//   const onButtonAutoplayClick = useCallback(
-//     (callback: () => void) => {
-//       const autoplay = emblaApi?.plugins()?.autoplay;
-//       if (!autoplay) return;
-
-//       const resetOrStop =
-//         autoplay.options.stopOnInteraction === false
-//           ? autoplay.reset
-//           : autoplay.stop;
-
-//       resetOrStop();
-//       callback();
-//     },
-//     [emblaApi]
-//   );
-
-//   const toggleAutoplay = useCallback(() => {
-//     const autoplay = emblaApi?.plugins()?.autoplay;
-//     if (!autoplay) return;
-
-//     const playOrStop = autoplay.isPlaying() ? autoplay.stop : autoplay.play;
-//     playOrStop();
-//   }, [emblaApi]);
-
-//   useEffect(() => {
-//     const autoplay = emblaApi?.plugins()?.autoplay;
-//     if (!autoplay) return;
-
-//     setIsPlaying(autoplay.isPlaying());
-//     emblaApi
-//       .on('autoplay:play', () => setIsPlaying(true))
-//       .on('autoplay:stop', () => setIsPlaying(false))
-//       .on('reInit', () => setIsPlaying(autoplay.isPlaying()));
-//   }, [emblaApi]);
-
-//   return (
-//     <div className="embla">
-//       <div className="embla__viewport" ref={emblaRef}>
-//         <div className="embla__container">
-//           {slides.map((index) => (
-//             <div className="embla__slide" key={index}>
-//               <div className="embla__slide__number">
-//                 <span>{index + 1}</span>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-
-//       <div className="embla__controls">
-//         <div className="embla__buttons">
-//           <PrevButton
-//             onClick={() => onButtonAutoplayClick(onPrevButtonClick)}
-//             disabled={prevBtnDisabled}
-//           />
-//           <NextButton
-//             onClick={() => onButtonAutoplayClick(onNextButtonClick)}
-//             disabled={nextBtnDisabled}
-//           />
-//         </div>
-
-//         <button className="embla__play" onClick={toggleAutoplay} type="button">
-//           {isPlaying ? 'Stop' : 'Start'}
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default EmblaCarousel;
+export default Carousel;

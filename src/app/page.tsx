@@ -2,12 +2,9 @@ import Image from 'next/image';
 import HeroImage from '../../public/images/bg1.jpg';
 import Services from './components/common/services';
 import Video from './components/videodialog';
-// import EmblaCarousel from './components/common/carousel';
+import Carousel from './components/common/carousel';
 
 export default function Home() {
-  // const OPTIONS = { loop: true }
-  // const SLIDE_COUNT = 5
-  // const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
   return (
     <div>
@@ -28,8 +25,10 @@ export default function Home() {
         </div>
       </header>
 
-      <section className='mt-[300px] pb-10'>
-        {/* <EmblaCarousel slides={SLIDES} options={OPTIONS} /> */}
+      <section className='mt-[300px] pb-10 '>
+        <div className='max-w-[1100px] mx-auto'>
+          <Carousel />
+        </div>
       </section>
 
       <section className='max-w-[1100px] mx-auto py-10 flex justify-between'>

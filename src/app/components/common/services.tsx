@@ -26,7 +26,7 @@ const Services = () => {
   ]
 
   return (
-    <div className="grid grid-cols-3">
+    <div className="grid grid-cols-1 md:grid-cols-3 place-items-center mb-10 sm:mb-20">
       {services.map((service, index) => (
         <div key={index} className="max-w-[380px] px-[15px]">
           <div className="flex justify-center pb-2">{service.icon}</div>

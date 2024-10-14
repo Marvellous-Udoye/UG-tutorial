@@ -14,7 +14,7 @@ const Navlinks = () => {
   const linkStyle = 'cursor-pointer font-medium text-base tracking-[1px] leading-6 p-2 border-b-[1px] border-b-white hover:text-[#a40eff] hover:border-b-[#a40eff] transition linear duration-300';
 
   return (
-    <ul className="flex gap-[25px]">
+    <ul className="hidden lg:flex gap-[25px]">
       {paths.map((link: string) => (
         <Link href={link} key={link}>
           <li

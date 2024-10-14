@@ -7,7 +7,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className='bg-[#0e0f10]'>
-      <section className='max-w-[1100px] mx-auto grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4 lg:gap-justify-between pt-12 pb-16'>
+      <section className='max-w-[1100px] mx-auto grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4 lg:gap-justify-between pt-12 pb-16 px-4 lg:px-0'>
         <div className='px-[15px]'>
           <h2 className='text-white text-[24px] font-semibold tracking-[1px] leading-[28px] mb-5'><span className='text-[#5e0e8f]'>About</span> Us</h2>
           <p className='max-w-[285px] text-[15px] font-normal tracking-[0.5px] leading-[27px] text-[#bfbfbf]'>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. lacinia eget consectetur sed, convallis at tellus..</p>
@@ -55,9 +55,9 @@ const Footer = () => {
 
       <hr />
 
-      <section className='max-w-[1100px] mx-auto py-4 flex justify-between text-white'>
-        <p className='font-normal text-[15px] tracking-[1px]'>@ 2024 Union Group Tutorials. All Right Reserved</p>
-        <div className='flex gap-5'>
+      <section className='max-w-[1100px] mx-auto px-[15px] py-4 flex flex-col-reverse gap-2 md:flex-row justify-between text-white'>
+        <p className='font-normal text-[15px] tracking-[1px] text-center md:text-left'>@ 2024 Union Group Tutorials. All Right Reserved</p>
+        <div className='flex flex-col items-center md:flex-row gap-5'>
           <span className='font-normal text-[15px] tracking-[1px]'>Follow us on:</span>
           <SocialMediaIcons />
         </div>

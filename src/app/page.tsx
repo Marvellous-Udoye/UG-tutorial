@@ -20,18 +20,18 @@ export default function Home() {
         <div className='absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white py-4 md:py-16 px-4 md:px-12 rounded-lg max-w-[1130px] w-full shadow-custom-shadow'>
           <h1 className='font-semibold text-[32px] md:text-[40px] leading-12 md:tracking-[2px] text-center'>What <span className='text-[#a40eff] border-b-[2px] border-b-[#a40eff] pb-4'>We Offer</span></h1>
           <div className='mt-8 md:mt-20'>
-            <Services />
+            <Services serviceQty={3} />
           </div>
         </div>
       </header>
 
-      <section className='mt-[300px] pb-10 '>
+      <section className='mt-[350px] pb-10 '>
         <div className='max-w-[1100px] mx-auto'>
           <Carousel />
         </div>
       </section>
 
-      <section className='max-w-[1100px] mx-auto py-10 flex flex-col gap-4 md:justify-between'>
+      <section className='max-w-[1100px] mx-auto py-10 flex flex-col md:flex-row gap-4 md:justify-between'>
         <div className='flex flex-col gap-8 md:gap-10 max-w-[640px] px-4 md:px-0'>
           <h1 className='font-semibold text-[32px] md:text-[40px] leading-12 md:tracking-[2px] text-center md:text-left'>Our <span className='text-[#a40eff] border-b-[2px] border-b-[#a40eff] pb-4'>Mission</span></h1>
           <div className='flex flex-col gap-4 md:gap-8'>
@@ -63,7 +63,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='max-w-[1100px] mx-auto flex flex-row-reverse flex-col gap-10 items-center md:justify-between pt-10 pb-20 '>
+      <section className='max-w-[1100px] mx-auto flex flex-col md:flex-row-reverse gap-10 items-center md:justify-between pt-10 pb-20 '>
         <div className='w-full md:max-w-[450px] px-4 md:px-0 flex flex-col gap-8 justify-center'>
           <h1 className='font-semibold text-[32px] md:text-[40px] leading-12 md:tracking-[2px] text-center'>Watch <span className='text-[#a40eff] border-b-[2px] border-b-[#a40eff] pb-4'>Demo</span></h1>
           <p className='text-center md:tracking-[1px]'>
